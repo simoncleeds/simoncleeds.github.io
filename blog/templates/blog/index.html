@@ -1,11 +1,54 @@
 {% extends "base.html"%}
+{% load static %}
 
 {% block title %}
  My Blog
 {% endblock %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}"/>
+{% endblock %}
+
 {% block content %}
-    <h1>Welcome to my blog</h1>
+    <header id="main-navigation">
+        <h1><a href="">Simon's Blog Site</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Simon C - The Author of This Blog">
+            <h2>SIMON'S BLOG</h2>
+        </header>
+        <p>Hi, I am Simon</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Post</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Something"/> </a>
+                        <div class="post__content">
+                            <h3>Test Blog</h3>
+                            <p>This is a test blog to see what the page looks like online. At the moment no links are connected so there is no point trying them.</p>
+                        </div>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2> What I do</h2>
+        <p>I am an Apprentice Software Developer</p>
+        <p>I am training to specialise in Django Powershell and MySQL</p>
+    </section>
+
+
+    
 {% endblock %}
 
 
