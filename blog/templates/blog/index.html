@@ -10,16 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <header id="main-navigation">
-        <h1><a href="">Simon's Blog Site</a></h1>
-        <nav>
-            <a href="">All Posts</a>
-        </nav>
-    </header>
-
+   
     <section id="welcome">
         <header>
-            <img src="" alt="Simon C - The Author of This Blog">
+            <img src="{% static "blog/images/simon.png" %}" alt="Simon C - The Author of This Blog">
             <h2>SIMON'S BLOG</h2>
         </header>
         <p>Hi, I am Simon</p>
@@ -28,16 +22,8 @@
     <section id="latest-posts">
         <h2>My Latest Post</h2>
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="" alt="Something"/> </a>
-                        <div class="post__content">
-                            <h3>Test Blog</h3>
-                            <p>This is a test blog to see what the page looks like online. At the moment no links are connected so there is no point trying them.</p>
-                        </div>
-                </article>
-            </li>
+           {% include "blog/includes/post.html" %}
+          
         </ul>
     </section>
 
